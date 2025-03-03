@@ -27,11 +27,10 @@ function lengthFunction(){
 
   if (numericInput == 1){
     length.textContent = `${numericInput} meter = ${meters.toFixed(3)} feet || ${numericInput} feet = ${feet.toFixed(3)} meter`
-
-        } else
-
-    length.textContent = `${numericInput} meters = ${meters.toFixed(3)} feet || ${numericInput} feet = ${feet.toFixed(3)} meters`
-
+        } else if (numericInput > 1){
+          length.textContent = `${numericInput} meters = ${meters.toFixed(3)} feet || ${numericInput} feet = ${feet.toFixed(3)} meters`
+          } else
+            length.textContent = "You should take a nap. Bye Baby, Sleepwell!"
 }
 
 function volumeFunction(){
@@ -47,8 +46,10 @@ function volumeFunction(){
 
   if (numericInput == 1){
       volume.textContent = `${numericInput} liter = ${liter.toFixed(3)} gallons || ${numericInput} gallon = ${gallons.toFixed(3)} liters`
-      } else
+      } else if (numericInput > 1){
         volume.textContent = `${numericInput} liters = ${liter.toFixed(3)} gallons || ${numericInput} gallons = ${gallons.toFixed(3)} liters`
+      } else
+      volume.textContent = "You should take a nap. Bye Baby, Sleepwell!"
 }
 
 function massFunction(){
@@ -63,6 +64,9 @@ function massFunction(){
   let pounds = numericInput / pound
   if (numericInput == 1){
     mass.textContent = `${numericInput} kilogram = ${kilograms.toFixed(3)} pounds || ${numericInput} pounds = ${pounds.toFixed(3)} kilogram`
-    } else
-  mass.textContent = `${numericInput} kilograms = ${kilograms.toFixed(3)} pounds || ${numericInput} pounds = ${pounds.toFixed(3)} kilograms`
+    } else if (numericInput > 1){
+      mass.textContent = `${numericInput} kilograms = ${kilograms.toFixed(3)} pounds || ${numericInput} pounds = ${pounds.toFixed(3)} kilograms`
+      } else 
+        mass.textContent = "You should take a nap. Bye Baby, Sleepwell!"
+    
 }
